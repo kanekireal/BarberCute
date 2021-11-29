@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playball&display=swap');
+
+/* ==========================================================================
+   "Our-team" styles by Wesley Levasseur (https://github.com/kanekireal)
+   ========================================================================== */
+
+#our-team {
+  font-family: 'Oranienbaum', sans-serif;
+  height: 75rem;
+  width: 100vw;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  grid-template-rows: repeat(3, .27fr);
+}
+
+/*
+ *
+ * Simply card with `box-shadow`,
+ * Animation with all browser,
+ * And this card was rounded for Luxury style.
+ *
+ */
+.card {
+  height: 16rem;
+  width: 13rem;
+  display: grid;
+  background-color: #ffffff;
+  box-shadow: 0 3.2rem .4rem .4rem rgba(34, 34, 34, 0.05);
+  border-radius: 1rem;
+  grid-template-rows: 70%;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 3.2rem .7rem .7rem rgba(24, 24, 24, 0.05);
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 1179px) {
+  #our-team {
+    height: 50rem;
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, .2fr);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #our-team {
+    grid-template-columns: repeat(3, 15rem);
+  }
+}
+
+
+/*
+ *
+ * Reset `margin` and `padding` for figure inner `.card`.
+ *
+ */
+.card figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ *
+ * Set size for `img` inner `.card .socials-network`.
+ *
+ */
+.card .socials-network img {
+  height: 32px;
+  width: 32px;
+}
+
+/*
+ *
+ * Background image,
+ * Animation with all browser,
+ * Default the image was filtered with `grayscale(75%)`,
+ * Hover image the filter `grayscale(75%)` turn to `0%`,
+ * Filter with all browser,
+ * And this image was rounded for Luxury style.
+ *
+ */
+.card .background-box img {
+  background-color: white;
+  border-radius: 1rem;
+  height: 160%;
+  width: 100%;
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover .background-box img {
+  -webkit-filter: none;
+  filter: none;
+}
+
+/*
+ *
+ * Container with `z-index: 1` for upper `.background-box`,
+ * And this container was rounded for Luxury style.
+ *
+ */
+.card .large-box {
+  z-index: 1;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+/*
+ *
+ * This `.smart-box` was an little box,
+ * And this box was rounded for Luxury style.
+ *
+ */
+.card .smart-box {
+  height: 5rem;
+  background-color: #292828;
+  border-radius: 1rem;
+  grid-template-columns: none;
+  grid-template-rows: repeat(2, 3vh);
+  display: grid;
+  align-items: start;
+  justify-content: center;
+}
+
+/*
+ * Define `.title` style.
+ */
+.card .smart-box .title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*
+ * Define `.subtitle` style.
+ */
+.card .smart-box .subtitle {
+  color: lightgrey;
+  text-align: center;
+}
+
+/*
+ * Define `.description` style.
+ */
+.card .description-box .description {
+  padding: .4rem;
+  font-size: .7rem;
+}
+
+/*
+ *
+ * This container, contain Socials Network,
+ * Animation with all browser,
+ * This position was `absolute`,
+ * But there placement was on `top-left` since `.card`.
+ *
+ */
+.card .socials-network {
+  opacity: 0;
+  position: absolute;
+  padding: .3rem;
+  height: 32px;
+  width: 32px;
+  -moz-animation: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.card:hover .socials-network {
+  opacity: 1;
+}
+
+/*
+ * Define `article` style on `.socials-network`.
+ */
+.card .socials-network article {
+  margin-bottom: .3rem;
+}
