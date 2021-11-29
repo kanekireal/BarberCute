@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playball&display=swap');
+
+/* ==========================================================================
+   "Gallery" styles by Wesley Levasseur (https://github.com/kanekireal)
+   ========================================================================== */
+
+.contact {
+  font-family: 'Oranienbaum', sans-serif;
+  height: 100rem;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 70rem 45rem;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+
+/*
+ *
+ * This `.container-contact` was an box contain information and form,
+ *
+ */
+.contact .container-contact {
+  display: grid;
+  grid-template-rows: 30rem 30rem;
+}
+
+@media screen and (min-width: 730px) {
+  .contact {
+    height: 80rem;
+    grid-template-rows: 50rem 30rem;
+  }
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 820px) {
+  .contact {
+    height: 65rem;
+    grid-template-rows: 30rem 0rem;
+  }
+
+  .contact .container-contact {
+    grid-template-columns: 20rem 30rem;
+  }
+}
+
+/*
+ *
+ * This `.container-informations` was an box contain information,
+ *
+ */
+.contact .container-informations {
+  display: grid;
+  grid-template-rows: repeat(3, 5rem);
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/*
+ *
+ * This `.information` was information on `.container-informations`,
+ * Animation with all browser,
+ * And this box was rounded for Luxury style.
+ *
+ */
+.contact .container-informations .information {
+  height: 4rem;
+  width: 70vw;
+  background-color: #292828;
+  border-radius: 1rem;
+  grid-template-columns: none;
+  grid-template-rows: repeat(2, 1.4rem);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 820px) {
+  .contact .container-informations .information {
+    width: 12rem;
+  }
+}
+
+.contact .container-informations .information:hover {
+  background-color: #444444;
+}
+
+
+/*
+ *
+ * Reset `text-decoration` for `<a>` inner `.container-informations`.
+ *
+ */
+.contact .container-informations a {
+  text-decoration: none;
+}
+
+/*
+ * Define `.title` style on `.container-informations`.
+ */
+.contact .container-informations .information .title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * Define `.title` style on `.container-informations`.
+ */
+.contact .container-informations .information .subtitle {
+  color: grey;
+  text-align: center;
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+}
+
+/* ======================
+   Form style
+   ====================== */
+.contact .container-form form section {
+  display: grid;
+  grid-template-rows: repeat(3, 9.4rem) 10rem;
+  grid-gap: 2rem;
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 730px) {
+  .contact .container-form form section {
+    grid-template-rows: repeat(3, 3rem) 23rem;
+  }
+}
+
+.contact .container-form form label {
+  background-color: #292828;
+  border-radius: 1rem;
+  border: 0;
+  color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.contact .container-form .dual-input-row,
+.contact .container-form .dual-input-column {
+  display: grid;
+  grid-gap: 1.4rem;
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 730px) {
+  .contact .container-form .dual-input-row {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact .container-form .dual-input-column {
+    height: unset;
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact .container-form .dual-input-row input,
+.contact .container-form .dual-input-column input,
+.contact .container-form .dual-input-column textarea {
+  width: 95.9%;
+  height: 1.4rem;
+  background-color: #c2c2c2;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: 0;
+  padding: .6rem;
+}
+
+.contact .container-form .dual-input-column input,
+.contact .container-form .dual-input-column textarea {
+  width: 96%;
+}
+
+.contact .container-form .dual-input-column textarea {
+  resize: none;
+  height: 5rem;
+}
+
+
+.contact .container-form .submit-input {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: .5rem;
+}
+
+.contact .container-form .submit-button {
+  width: 15rem;
+  height: 3rem;
+  background-color: #292828;
+  border-radius: 1rem;
+  border: 0;
+  color: white;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.contact .container-form .submit-button:hover {
+  background-color: #444444;
+  cursor: pointer;
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 720px) and (max-width: 820px) {
+  .contact .container-form .dual-input-row input {
+    width: 94.2%;
+  }
+
+  .contact .container-form .dual-input-column input {
+    width: 97.2%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .contact .container-form .dual-input-row input {
+    width: 91.5%;
+  }
+
+  .contact .container-form .dual-input-column input {
+    width: 96.1%;
+  }
+}
+
+/*
+ *
+ * Simply Map container with `box-shadow`,
+ * Animation with all browser,
+ * And this card was rounded for Luxury style.
+ *
+ */
+.contact .container-map {
+  height: 19rem;
+  width: 75vw;
+  margin: 5rem;
+  display: grid;
+  background-color: #ffffff;
+  box-shadow: 0 .5rem .4rem .4rem rgba(34, 34, 34, 0.05);
+  border-radius: 1rem;
+  grid-template-rows: 19rem;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.contact .container-map:hover {
+  box-shadow: 0 .5rem .7rem .7rem rgba(24, 24, 24, 0.05);
+}
+
+/*
+ *
+ * Reset `margin` and `padding` figure inner `.container-map`.
+ *
+ */
+.contact .container-map figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ *
+ * Background `iframe`,
+ * And this `iframe` was rounded for Luxury style.
+ *
+ */
+.contact .container-map .container-background iframe {
+  background-color: white;
+  border-radius: 1rem;
+  height: 110%;
+  width: 100%;
+  border: 0;
+  -webkit-filter: none;
+  filter: none;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/*
+ *
+ * Container with `z-index: 1` for upper `.background-box`,
+ * And this container was rounded for Luxury style.
+ *
+ */
+.contact .container-map .container-large {
+  z-index: 1;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+/*
+ *
+ * This `.container-smart` was an little box,
+ * And this box was rounded for Luxury style.
+ *
+ */
+.contact .container-map .container-smart {
+  height: 3rem;
+  background-color: #292828;
+  border-radius: 1rem;
+  grid-template-columns: none;
+  grid-template-rows: 1.3rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/*
+ * Define `.title` style on `.container-smart`.
+ */
+.contact .container-map .container-smart .title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
