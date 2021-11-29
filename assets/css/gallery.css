@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&family=Playball&display=swap');
+
+/* ==========================================================================
+   "Gallery" styles by Wesley Levasseur (https://github.com/kanekireal)
+   ========================================================================== */
+
+#gallery {
+  font-family: 'Oranienbaum', sans-serif;
+  height: 100rem;
+  width: 100vw;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  grid-template-rows: repeat(5, 15rem);
+}
+
+/*
+ *
+ * Simply card with `box-shadow`,
+ * Animation with all browser,
+ * And this card was rounded for Luxury style.
+ *
+ */
+.card {
+  height: 13rem;
+  width: 13rem;
+  margin: 5rem;
+  display: grid;
+  background-color: #ffffff;
+  box-shadow: 0 .5rem .4rem .4rem rgba(34, 34, 34, 0.05);
+  border-radius: 1rem;
+  grid-template-rows: 70%;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 .5rem .7rem .7rem rgba(24, 24, 24, 0.05);
+}
+
+/*
+ *
+ * Responsive for all screen, Mobile, Tablet, Desktop, TV...
+ * _Feature => Responsive for print_
+ *
+ */
+@media screen and (min-width: 768px) {
+  #gallery {
+    height: 50rem;
+    grid-template-rows: repeat(2, 15rem);
+    grid-template-columns: repeat(3, 15rem);
+  }
+}
+
+/*
+ *
+ * Reset `margin` and `padding` for figure inner `.card`.
+ *
+ */
+.card figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ *
+ * Background image,
+ * Animation with all browser,
+ * Default the image was filtered with `grayscale(0%)`,
+ * Hover image the filter `grayscale(0%)` turn to `75%`,
+ * Filter with all browser,
+ * And this image was rounded for Luxury style.
+ *
+ */
+.card .background-box img {
+  background-color: white;
+  border-radius: 1rem;
+  height: 130%;
+  width: 100%;
+  -webkit-filter: none;
+  filter: none;
+  -moz-animation: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover .background-box img {
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+}
+
+/*
+ *
+ * Container with `z-index: 1` for upper `.background-box`,
+ * And this container was rounded for Luxury style.
+ *
+ */
+.card .large-box {
+  z-index: 1;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+/*
+ *
+ * This `.smart-box` was an little box,
+ * And this box was rounded for Luxury style.
+ *
+ */
+.card .smart-box {
+  height: 4rem;
+  background-color: #292828;
+  border-radius: 1rem;
+  grid-template-columns: none;
+  grid-template-rows: repeat(2, 3vh);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/*
+ * Define `.title` style.
+ */
+.card .smart-box .title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * Define `.subtitle` style.
+ */
+.card .smart-box .subtitle {
+  color: lightgrey;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
