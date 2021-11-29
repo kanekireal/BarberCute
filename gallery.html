@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link href="assets/manifest.json" rel="manifest">
+  <link href="assets/img/icon.png" rel="apple-touch-icon">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link href="assets/css/normalize.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="assets/css/gallery.css" rel="stylesheet">
+
+  <meta content="#fafafa" name="theme-color">
+</head>
+<body>
+
+<main id="gallery">
+  <script>
+    for (let i of Array(6).keys()) if (i !== 0) document.getElementById('gallery').innerHTML += (`<section class="card">
+    <figure class="background-box">
+      <img alt="Gallery-${i}"
+           src="assets/img/gallery/Gallery-${i}.jpg"/>
+    </figure>
+    <article class="large-box">
+      <section>
+        <article class="smart-box">
+          <p class="title">Name's cut</p>
+          <p class="subtitle">11/02/2021</p>
+        </article>
+      </section>
+    </article>
+  </section>`)
+  </script>
+</main>
+
+</body>
+</html>
